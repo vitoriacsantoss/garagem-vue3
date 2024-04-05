@@ -3,7 +3,7 @@ import HomeView from "../views/HomeView.vue";
 import CategoriaView from "../views/CategoriaView.vue";
 import AcessorioView from "../views/AcessorioView.vue";
 import CorView from "../views/CorView.vue";
-import MarcasView from "../views/MarcaView.vue"
+import MarcasView from "../views/MarcasView.vue"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

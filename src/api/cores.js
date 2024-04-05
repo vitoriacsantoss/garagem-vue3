@@ -1,19 +1,19 @@
 import axios from "axios";
 export default class CorApi {
   async buscarTodasAsCor() {
-    const { data } = await axios.get("/Cor/");
+    const { data } = await axios.get("/cores/");
     return data.results;
   }
-  async adicionarCor(Cor) {
-    const { data } = await axios.post("/Cor/", Cor);
+  async adicionarCor(cor) {
+    const { data } = await axios.post("/cores/", cor);
     return data.results;
   }
-  async atualizarCor(Cor) {
-    const { data } = await axios.put(`/Cor/${Cor.id}/`, Cor);
+  async atualizarCor(cor) {
+    const { data } = await axios.put(`/cores/${cor.id}/`, cor);
     return data.results;
   }
   async excluirCor(id) {
-    const { data } = await axios.delete(`/Cor/${id}/`);
+    const { data } = await axios.delete(`/cores/${id}/`);
     return data.results;
   }
 }

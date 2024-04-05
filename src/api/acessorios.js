@@ -1,19 +1,19 @@
 import axios from "axios";
 export default class AcessoriosApi {
   async buscarTodasAsAcessorios() {
-    const { data } = await axios.get("/Acessorios/");
+    const { data } = await axios.get("/acessorios/");
     return data.results;
   }
-  async adicionarAcessorios(Acessorios) {
-    const { data } = await axios.post("/Acessorios/", Acessorios);
+  async adicionarAcessorios(acessorios) {
+    const { data } = await axios.post("/acessorios/", acessorios);
     return data.results;
   }
-  async atualizarAcessorios(Acessorios) {
-    const { data } = await axios.put(`/Acessorios/${Acessorios.id}/`, Acessorios);
+  async atualizarAcessorios(acessorios) {
+    const { data } = await axios.put(`/acessorios/${acessorios.id}/`, acessorios);
     return data.results;
   }
   async excluirAcessorios(id) {
-    const { data } = await axios.delete(`/Acessorios/${id}/`);
+    const { data } = await axios.delete(`/acessorios/${id}/`);
     return data.results;
   }
 }
